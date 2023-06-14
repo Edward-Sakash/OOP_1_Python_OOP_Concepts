@@ -1,4 +1,4 @@
-from tv import TV
+"""from tv import TV
 
 
  # Let's make a TV party!!
@@ -30,4 +30,45 @@ class TVParty:
             + "It's being shown on channel [95], and we're currently on channel [" + str(tv.channel) + "]. "
             + "Your friend Gabriel also would like to have the volume set to [5], and we're currently on volume ["
             + str(tv.volume_level) + "]."
+        )"""
+##########################################################
+from tv import TV
+
+class TVParty:
+    def __init__(self):
+        tv = TV()  # Instantiate the TV object
+
+        # Part 1
+        tv.turn_on()  # Turn the TV on
+        tv.set_channel(3)  # Set the channel to 3
+        for _ in range(7):  # Increase the volume to 7
+            tv.volume_up()
+
+        print(
+            "Let's watch the Alien Movie. The TV is currently [" + str(tv.turned_on) + "] and it should be [on]."
+            + " It's being shown on channel [3], and we're currently on channel [" + str(tv.channel) + "]. "
+            + "Your friend Lisa also would like to have the volume set to [7], and we're currently on volume ["
+            + str(tv.volume_level) + "]."
         )
+
+        # Food break! Turn the TV off
+        tv.turn_off()
+
+        print("Food break! The TV should be [off], and it's currently [" + str(tv.turned_on) + "].")
+
+        # Part 2
+        tv.turn_on()  # Turn the TV back on
+        tv.set_channel(95)  # Set the channel to 95
+        tv.volume_down()  # Decrease the volume to 5
+
+        print(
+            "Now let's watch the last season of Game of Thrones. The TV is currently [" + str(tv.turned_on)
+            + "] and it should be [on]. "
+            + "It's being shown on channel [95], and we're currently on channel [" + str(tv.channel) + "]. "
+            + "Your friend Gabriel also would like to have the volume set to [5], and we're currently on volume ["
+            + str(tv.volume_level) + "]."
+        )
+
+# Create an instance of the TVParty class and run the TV party
+party = TVParty()
+
