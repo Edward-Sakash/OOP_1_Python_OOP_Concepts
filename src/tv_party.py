@@ -45,7 +45,7 @@ class TVParty:
             tv.volume_up()
 
         print(
-            "Let's watch the Alien Movie. The TV is currently [" + str(tv.turned_on) + "] and it should be [on]."
+            f"Let's watch the Alien Movie. The TV is currently [ {'off' if  str(tv.turned_on) else 'off'}] and it should be [on]."
             + " It's being shown on channel [3], and we're currently on channel [" + str(tv.channel) + "]. "
             + "Your friend Lisa also would like to have the volume set to [7], and we're currently on volume ["
             + str(tv.volume_level) + "]."
@@ -54,7 +54,7 @@ class TVParty:
         # Food break! Turn the TV off
         tv.turn_off()
 
-        print("Food break! The TV should be [off], and it's currently [" + str(tv.turned_on) + "].")
+        print(f"Food break! The TV should be [off], and it's currently [ {'on' if str(tv.turned_on) else 'off'}].")
 
         # Part 2
         tv.turn_on()  # Turn the TV back on
@@ -62,8 +62,7 @@ class TVParty:
         tv.volume_down()  # Decrease the volume to 5
 
         print(
-            "Now let's watch the last season of Game of Thrones. The TV is currently [" + str(tv.turned_on)
-            + "] and it should be [on]. "
+            f"Now let's watch the last season of Game of Thrones. The TV is currently [{'off' if  str(tv.turned_on) else 'on'}] and it should be [on]. "
             + "It's being shown on channel [95], and we're currently on channel [" + str(tv.channel) + "]. "
             + "Your friend Gabriel also would like to have the volume set to [5], and we're currently on volume ["
             + str(tv.volume_level) + "]."
